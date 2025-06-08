@@ -49,14 +49,10 @@ def main():
                 print("Game Over!")
                 return
             # Check Shot collision with Asteroid
-            print (len(shots))
             for shot in shots:
-                print("yeah I'm here")
                 if i.check_collision(shot):
-                    print("killing shot")
                     shot.kill()
-                    print("killing asteroid")
-                    i.kill()
+                    i.split()
 
         
         pygame.display.flip()
