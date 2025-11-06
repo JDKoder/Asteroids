@@ -7,6 +7,7 @@ from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
+from logger import log_state
 
 # group init
 updatable = pygame.sprite.Group()
@@ -35,6 +36,7 @@ def main():
     asteroid_field = AsteroidField()
 
     while True:
+        log_state()
         screen.fill("black")
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
